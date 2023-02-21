@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\Web\\Neil Cummings App\\API\\API.csproj": {}
+    "d:\\Projects\\Web\\Neil Cummings App\\API\\API.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\Web\\Neil Cummings App\\API\\API.csproj": {
+    "d:\\Projects\\Web\\Neil Cummings App\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\Web\\Neil Cummings App\\API\\API.csproj",
+        "projectUniqueName": "d:\\Projects\\Web\\Neil Cummings App\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "D:\\Projects\\Web\\Neil Cummings App\\API\\API.csproj",
+        "projectPath": "d:\\Projects\\Web\\Neil Cummings App\\API\\API.csproj",
         "packagesPath": "C:\\Users\\mathe\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\Web\\Neil Cummings App\\API\\obj\\",
+        "outputPath": "d:\\Projects\\Web\\Neil Cummings App\\API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\mathe\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -21,7 +21,6 @@
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -40,6 +39,10 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
@@ -49,6 +52,10 @@
             "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
               "version": "[7.0.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.27.0, )"
             }
           },
           "imports": [

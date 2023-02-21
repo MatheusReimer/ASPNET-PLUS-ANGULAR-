@@ -5,6 +5,7 @@ using System.Text;
 using API.Data;
 using API.DTOs;
 using API.Entities;
+using API.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -13,13 +14,15 @@ namespace API.Controllers
     public class AccountsController:BaseAPIController
     {
         private readonly DataContext _context;
-        public AccountsController(DataContext context)
+        private readonly ITokenService _tokenService;
+        public AccountsController(DataContext context, ITokenService tokenService)
         {
             _context = context;
+            _tokenService = tokenService;
         }
 
         [HttpPost("register")]
-        public async Task<ActionResult<AppUser>> Register(RegisterDTO userDTO)
+        public async Task<ActionResult<UserDTO>> Register(RegisterDTO userDTO)
         {
             if (await UserExists(userDTO.Username)) return BadRequest("Username is taken");
 
@@ -35,11 +38,14 @@ namespace API.Controllers
             _context.Users.Add(user);
             await _context.SaveChangesAsync();
 
-            return user;
+            return new UserDTO(){
+                Username = user.UserName,
+                Token = _tokenService.CreateToken(user)
+            };
         }
 
             [HttpPost("login")]
-        public async Task<ActionResult<AppUser>> Login(LoginDTO userDTO)
+        public async Task<ActionResult<UserDTO>> Login(LoginDTO userDTO)
         {
             var user = await _context.Users.SingleOrDefaultAsync(x => x.UserName.Equals(userDTO.Username));
 
@@ -52,7 +58,10 @@ namespace API.Controllers
             for(int i =0 ; i< computedHash.Length;i++){
                 if(computedHash[i] != user.PasswordHash[i]) return Unauthorized("Invalid Password or Username");
             }
-            return user;
+            return new UserDTO(){
+                Username = user.UserName,
+                Token = _tokenService.CreateToken(user)
+            };
         }
 
 
