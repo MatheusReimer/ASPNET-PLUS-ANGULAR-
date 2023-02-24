@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\Projects\\Web\\Neil Cummings App\\API\\API.csproj": {}
+    "D:\\Projects\\Web\\Neil Cummings App\\API\\API.csproj": {}
   },
   "projects": {
-    "d:\\Projects\\Web\\Neil Cummings App\\API\\API.csproj": {
+    "D:\\Projects\\Web\\Neil Cummings App\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\Projects\\Web\\Neil Cummings App\\API\\API.csproj",
+        "projectUniqueName": "D:\\Projects\\Web\\Neil Cummings App\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "d:\\Projects\\Web\\Neil Cummings App\\API\\API.csproj",
+        "projectPath": "D:\\Projects\\Web\\Neil Cummings App\\API\\API.csproj",
         "packagesPath": "C:\\Users\\mathe\\.nuget\\packages\\",
-        "outputPath": "d:\\Projects\\Web\\Neil Cummings App\\API\\obj\\",
+        "outputPath": "D:\\Projects\\Web\\Neil Cummings App\\API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\mathe\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -21,6 +21,7 @@
           "net7.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

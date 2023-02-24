@@ -13,7 +13,6 @@ namespace API.Extensions
             {
                 options.UseSqlite(config.GetConnectionString("DefaultConnection"));
             });
-            services.AddCors();
             services.AddScoped<ITokenService, TokenService>();
             return services;
         }
