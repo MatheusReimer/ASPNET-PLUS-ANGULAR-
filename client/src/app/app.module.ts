@@ -13,6 +13,7 @@ import { MembersListComponent } from './members-list/members-list.component';
 import { MembersDetailComponent } from './members-detail/members-detail.component';
 import { ListsComponent } from './lists/lists.component';
 import { MessagesComponent } from './messages/messages.component';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,9 @@ import { MessagesComponent } from './messages/messages.component';
     HttpClientModule,
     FormsModule,
     BsDropdownModule.forRoot(),
+    ToastrModule.forRoot({
+      positionClass: 'toast-bottom-right'
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]
